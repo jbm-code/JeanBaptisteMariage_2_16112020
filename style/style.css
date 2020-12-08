@@ -259,3 +259,165 @@ a {
         display: none !important;
     }
 }
+/*-----------------------------------------------------------------------------------Hébergement*/
+.HébergementWrapper, .HébergementPopulaire, .HébergementMain {
+    background-color: #f2f2f2;
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.Hébergement {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+}
+
+.HébergementMain {
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.HébergementMainHeader {
+    grid-column: 1/-1;
+}
+
+.HébergementMainCard {
+    background-color: white;
+    padding: 0.375rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 16px #0000002e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.HébergementMainCard:hover {
+    transform: scale(1.02);
+}
+.HébergementMainCardFigure {
+    margin: 0;
+}
+
+.HébergementMainCardFigureImg {
+    height: 7rem;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.HébergementMainCardFigureCaptionTitre {
+    margin: 0.25rem 0.75rem 0 0.75rem;
+}
+
+.HébergementMainCardDesc {
+    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.HébergementMainCardDescPrice {
+    font-weight: bold;
+}
+
+.HébergementMainCardGrade {
+    margin: 0 0.75rem 0.25rem 0.75rem;
+}
+
+.HébergementMainCardGradeIcon[data-active=true] {
+    color: #0065FC;
+}
+
+.HébergementMainCardGradeIcon[data-active=false] {
+    color: #d9d9d9;
+}
+
+.HébergementMainViewmore {
+    font-weight: bold;
+}
+/*------------------------------------------------------------------------HébergementPopulaire*/
+.HébergementPopulaire {
+    display: grid;
+    row-gap: 2rem;
+    align-items: start;
+    grid-template-rows: auto repeat(3, 1fr)
+}
+
+.HébergementPopulaireTitre {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HébergementPopulaireWrapcontent {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    overflow: auto;
+}
+
+.HébergementPopulaireWrapcontentWraping {
+    position: relative;
+    min-height: 100%;
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+}
+
+.HébergementPopulaireWrapcontentWrapingImg {
+    border-radius: 1rem 0 0 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.HébergementPopulaireWrapcontentContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.HébergementPopulaireWrapcontentContentWhitespace {
+    flex: 1;
+}
+
+.HébergementPopulaireHébergementMainCard {
+    height: 8.75rem;
+}
+@media (max-width: 1440px) {
+    .Hébergement {
+        grid-template-columns: 1fr;
+        row-gap:2rem;
+    }
+    .HébergementPopulaire {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto 10rem;
+        column-gap: 2rem;
+       
+    }
+    .HébergementPopulaireTitre {
+        grid-column: 1/-1;
+    }
+}
+@media (min-width: 925px) {
+    .HébergementMain {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width: 925px) and (min-width: 650px) {
+    .HébergementMain {
+        grid-template-columns :1fr 1fr;
+    }
+}
+@media (max-width: 650px) {
+    .HébergementMain {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1000px) {
+    .HébergementPopulaire {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3, 9rem);
+    }
+}

@@ -90,3 +90,172 @@ a {
         border-bottom-color: #0065FC;
     }
 }
+/*-------------------------------------------------------------------------------Recherche*/
+.main {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+.RechercheHeaderTitre {
+    margin-bottom: 0.5rem;
+}
+.RechercheHeaderSoustitre {
+    margin-top: 0;
+}
+.RechercheForm {
+    display: inline-flex;
+    max-width: 100%;
+    overflow: auto;
+}
+.RechercheFormWrapicon {
+    background-color: #f2f2f2;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+}
+.RechercheFormWrapiconIcon {
+    margin-left: 0.1rem;
+}
+.RechercheFormSearchinput {
+    border-right: none;
+    border-left: none;
+    border-top: #f2f2f2 1px solid;
+    border-bottom: #f2f2f2 1px solid;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    width: 14rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+}
+.RechercheFormSearchinput::placeholder {
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    color: #00000069;
+}
+.RechercheFormSubmitinput {
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1.5rem;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    cursor: pointer;
+}   
+/*-------------------------------------------------------------- RechercheFiltres */
+.RechercheFiltres {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .RechercheFiltresTitre {
+    margin: 0 2rem 1rem 0;
+    display: flex;
+    align-items: center;
+  }
+  .RechercheFiltresFiltre {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    border: 2px solid #d9d9d9;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: bold;
+    padding-right: 1rem;
+  }
+  .RechercheFiltresFiltre:last-child {
+    margin-right: 0;
+  }
+  .RechercheFiltresFiltre:hover {
+    background-color: #f3f8ff;
+    transform: scale(1.015);
+  }
+
+.RechercheFiltresFiltreWrapicon {
+    background-color: #deebff;
+    border-radius: 100%;
+    height: 3rem; 
+    width: 3rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2px;
+}
+
+.RechercheFiltresFiltreWrapiconIcon {
+    color: #0065FC;   
+}
+.RechercheFiltresFiltreTitre {
+    margin: 0 1rem;
+}
+
+.RechercheResult {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.RechercheResultWrapicon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    border: solid 1px #d9d9d9;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.RechercheResultWrapiconIcon {
+    color:"#0065FC";
+}
+
+.RechercheResultText {
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .RechercheForm {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.RechercheFormSearchinput {
+    flex: 1;
+}
+
+.RechercheFormSubmitinputText {
+    display: none;
+}
+
+.RechercheFormSubmitinputIcon {
+    display: block;
+}
+
+@media screen and (max-width: 650px) {
+    .RechercheFiltresTitre {
+        width: 100%;
+    }
+    .RechercheFiltresFiltre {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .RechercheFormSubmitinputText {
+        display: block;
+    }
+    .RechercheFormSubmitinputIcon {
+        display: none !important;
+    }
+}
